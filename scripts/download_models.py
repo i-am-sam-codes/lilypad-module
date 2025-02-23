@@ -1,5 +1,5 @@
 import torch
-from transformers import DistilBertTokenizer, DistilBertForSequenceClassification
+from transformers import AutoTokenizer, AutoModelForSequenceClassification
 
 
 
@@ -8,8 +8,8 @@ def download_models():
     MODEL_IDENTIFIER = "distilbert/distilbert-base-uncased-finetuned-sst-2-english"
 
     # TODO: Initialize `model` and `tokenizer`
-    tokenizer = DistilBertTokenizer.from_pretrained(MODEL_IDENTIFIER)
-    model = DistilBertForSequenceClassification.from_pretrained(MODEL_IDENTIFIER)
+    tokenizer = AutoTokenizer.from_pretrained("distilbert/distilbert-base-uncased-finetuned-sst-2-english")
+    model = AutoModelForSequenceClassification.from_pretrained("distilbert/distilbert-base-uncased-finetuned-sst-2-english")
     if not MODEL_IDENTIFIER:
         print(
             "❌ Error: Model download script is not configured.",
