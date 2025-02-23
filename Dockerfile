@@ -19,7 +19,7 @@ COPY src ./src
 COPY models ./models
 
 # Set environment variables
-ENV HF_HOME=/app/models \
+ENV HF_HOME=/models \
 TRANSFORMERS_OFFLINE=1
 
 # Set entrypoint
