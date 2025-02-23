@@ -1,7 +1,4 @@
-import torch
 from transformers import AutoTokenizer, AutoModelForSequenceClassification
-
-
 
 
 def download_models():
